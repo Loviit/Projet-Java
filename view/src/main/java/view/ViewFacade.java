@@ -44,7 +44,7 @@ public class ViewFacade implements IView {
         
     }
     
-     public void initContainer() {
+    /* public void initContainer() {
         JPanel panel = new JPanel();
        
         for (int i = 0; i != 23; i++)
@@ -164,7 +164,7 @@ public class ViewFacade implements IView {
         }
         
         this.window.setVisible(true);  
-        }
+        }*/
     
 
     /*
@@ -174,6 +174,7 @@ public class ViewFacade implements IView {
     @Override
     public final void displayMessage(final String message) {
         JOptionPane.showMessageDialog(null, message);
+        System.out.println(message);
     }
 
 }
