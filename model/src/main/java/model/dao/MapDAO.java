@@ -6,125 +6,99 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Map;
+import model.Example;
 
 /**
  * <h1>The Class MapDAO.</h1>
  *
- * @author Alyssa
+ * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
+public abstract class MapDAO extends AbstractDAO {
 
-public class MapDAO extends AbstractDAO {
-	 /** The sql example by id. */
-    private static String sqlMapById   = "{call findMapById(?)}";
-    
-    /** The sql example by key. */
-    private static String sqlMapByKey   = "{call findMapByKey(?)}";
+	/** The sql example by id. */
+	private static String sqlExampleById = "{call findMapById(?)}";
 
-    /** The sql example by map. */
-    private static String sqlMapByMap = "{call findMapByMap(?)}";
+	/** The sql example by name. */
+	private static String sqlExampleByName = "{call findMapBySprite(?)}";
 
-    /** The sql all examples. */
-    private static String sqlAllMaps   = "{call findAllMaps()}";
+	/** The sql all examples. */
+	private static String sqlAllExamples = "{call findAllMap()}";
 
-    /** The id column index. */
-    private static int    idColumnIndex    = 1;
-    
-    /** The id column index. */
-    private static int    keyColumnIndex    = 2;
+	/** The id column index. */
+	private static int idColumnIndex = 1;
 
-    /** The name column index. */
-    private static int    mapColumnIndex  = 3;
+	/** The name column index. */
+	private static int nameColumnIndex = 2;
+	
+	/**
+	 * Gets the example by id.
+	 *
+	 * @param id
+	 *            the id
+	 * @return the example by id
+	 * @throws SQLException
+	 *             the SQL exception
+	 */
+	public static Example getExampleById(final int id) throws SQLException {
+		System.out.println("passe2");
+		final CallableStatement callStatement = prepareCall(sqlExampleById);
+		Example example = null;
+		callStatement.setInt(1, id);
+		if (callStatement.execute()) {
+			final ResultSet result = callStatement.getResultSet();
+			if (result.first()) {
+				example = new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex));
+			}
+			result.close();
+		}
+		return example;
+	}
 
-    /**
-     * Gets the map by id.
-     *
-     * @param id
-     *            the id
-     * @return the map by id
-     * @throws SQLException
-     *             the SQL exception
-     */
-    public static Map getMapById(final int id) throws SQLException {
-        final CallableStatement callStatement = prepareCall(sqlMapById);
-        Map map = null;
-        callStatement.setInt(1, id);
-        if (callStatement.execute()) {
-            final ResultSet result = callStatement.getResultSet();
-            if (result.first()) {
-                map = new Map(result.getInt(idColumnIndex), result.getString(keyColumnIndex),result.getString(mapColumnIndex));
-            }
-            result.close();
-        }
-        return map;
-    }
-    
-    /**
-     * Gets the map by key.
-     *
-     * @param key
-     *            the key
-     * @return the map by key
-     * @throws SQLException
-     *             the SQL exception
-     */
-    public static Map getMapByKey(final String key) throws SQLException {
-        final CallableStatement callStatement = prepareCall(sqlMapByKey);
-        Map map = null;
+	/**
+	 * Gets the example by name.
+	 *
+	 * @param name
+	 *            the name
+	 * @return the example by name
+	 * @throws SQLException
+	 *             the SQL exception
+	 */
+	public static Example getExampleByName(final String name) throws SQLException {
+		System.out.println("passe3");
+		final CallableStatement callStatement = prepareCall(sqlExampleByName);
+		Example example = null;
 
-        callStatement.setString(1, key);
-        if (callStatement.execute()) {
-            final ResultSet result = callStatement.getResultSet();
-            if (result.first()) {
-                map = new Map(result.getInt(idColumnIndex), result.getString(keyColumnIndex),result.getString(mapColumnIndex));
-            }
-            result.close();
-        }
-        return map;
-    }
-    /**
-     * Gets the map by map.
-     *
-     * @param map
-     *            the map
-     * @return the map by map
-     * @throws SQLException
-     *             the SQL exception
-     */
-    public static Map getMapByMap(final String map) throws SQLException {
-        final CallableStatement callStatement = prepareCall(sqlMapByMap);
-        Map map1 = null;
+		callStatement.setString(1, name);
+		if (callStatement.execute()) {
+			final ResultSet result = callStatement.getResultSet();
+			if (result.first()) {
+				example = new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex));
+			}
+			result.close();
+		}
+		return example;
+	}
 
-        callStatement.setString(1, map);
-        if (callStatement.execute()) {
-            final ResultSet result = callStatement.getResultSet();
-            if (result.first()) {
-                map1 = new Map(result.getInt(idColumnIndex), result.getString(keyColumnIndex),result.getString(mapColumnIndex));
-            }
-            result.close();
-        }
-        return map1;
-    }
+	/**
+	 * Gets the all examples.
+	 *
+	 * @return the all examples
+	 * @throws SQLException
+	 *             the SQL exception
+	 */
+	public static List<Example> getAllExamples() throws SQLException {
+		System.out.println("passe4");
+		final ArrayList<Example> examples = new ArrayList<Example>();
+		final CallableStatement callStatement = prepareCall(sqlAllExamples);
+		if (callStatement.execute()) {
+			final ResultSet result = callStatement.getResultSet();
 
-    /**
-     * Gets the all maps.
-     *
-     * @return the all maps
-     * @throws SQLException
-     *             the SQL exception
-     */
-    public static List<Map> getAllMaps() throws SQLException {
-        final ArrayList<Map> maps = new ArrayList<Map>();
-        final CallableStatement callStatement = prepareCall(sqlAllMaps);
-        if (callStatement.execute()) {
-            final ResultSet result = callStatement.getResultSet();
-
-            for (boolean isResultLeft = result.first(); isResultLeft; isResultLeft = result.next()) {
-                maps.add(new Map(result.getInt(idColumnIndex), result.getString(keyColumnIndex),result.getString(mapColumnIndex)));
-            }
-            result.close();
-        }
-        return maps;
-    }
+			for (boolean isResultLeft = result.first(); isResultLeft; isResultLeft = result.next()) {
+				examples.add(new Example(result.getInt(idColumnIndex), result.getString(nameColumnIndex)));
+			}
+			result.close();
+		}
+		return examples;
+	}
 }
