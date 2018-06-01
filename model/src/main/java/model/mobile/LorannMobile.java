@@ -19,7 +19,7 @@ public class LorannMobile extends Sprite {
 
 		missiles = new ArrayList<>();
 
-		loadImage("C:\\Users\\fifib\\Desktop\\sprite\\lorann_b.png");
+		loadImage("../sprite/lorann_b.png");
 		getImageDimensions();
 	}
 

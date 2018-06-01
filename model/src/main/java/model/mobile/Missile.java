@@ -14,7 +14,7 @@ public class Missile extends Sprite {
     
     private void initMissile() {
         
-        loadImage("C:\\Users\\fifib\\Desktop\\sprite\\fireball.gif");  
+        loadImage("../sprite/fireball.gif");  
         getImageDimensions();
     }
 

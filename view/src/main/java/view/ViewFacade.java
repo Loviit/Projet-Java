@@ -48,85 +48,85 @@ public class ViewFacade implements IView {
 			char caracter = level.charAt(i);
 			switch (caracter) {
 			case 'A':
-				Icon laurann = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\Laurann.gif");
+				Icon laurann = new ImageIcon("../sprite/Laurann.gif");
 				JLabel l = new JLabel();
 				l.setIcon(laurann);
 				pan.add(l);
 				break;
 			case 'B':
-				Icon fireball = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\fireball.gif");
+				Icon fireball = new ImageIcon("../sprite/fireball.gif");
 				JLabel f1 = new JLabel();
 				f1.setIcon(fireball);
 				pan.add(f1);
 				break;
 			case 'C':
-				Icon crystall_ball = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\crystal_ball.png");
+				Icon crystall_ball = new ImageIcon("../sprite/crystal_ball.png");
 				JLabel c = new JLabel();
 				c.setIcon(crystall_ball);
 				pan.add(c);
 				break;
 			case 'D':
-				Icon gate_closed = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\gate_closed.png");
+				Icon gate_closed = new ImageIcon("../sprite/gate_closed.png");
 				JLabel gc = new JLabel();
 				gc.setIcon(gate_closed);
 				pan.add(gc);
 				break;
 			case 'E':
-				Icon gate_open = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\gate_open.png");
+				Icon gate_open = new ImageIcon("../sprite/gate_open.png");
 				JLabel go = new JLabel();
 				go.setIcon(gate_open);
 				pan.add(go);
 				break;
 			case 'F':
-				Icon bone = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\bone.png");
+				Icon bone = new ImageIcon("../sprite/bone.png");
 				JLabel bo = new JLabel();
 				bo.setIcon(bone);
 				pan.add(bo);
 				break;
 			case 'G':
-				Icon bone_horizontal = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\horizontal_bone.png");
+				Icon bone_horizontal = new ImageIcon("../sprite/horizontal_bone.png");
 				JLabel bh = new JLabel();
 				bh.setIcon(bone_horizontal);
 				pan.add(bh);
 				break;
 			case 'H':
-				Icon vertical_bone = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\vertical_bone.png");
+				Icon vertical_bone = new ImageIcon("../sprite/vertical_bone.png");
 				JLabel vb = new JLabel();
 				vb.setIcon(vertical_bone);
 				pan.add(vb);
 				break;
 			case 'I':
-				Icon monster_1 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\monster_1.png");
+				Icon monster_1 = new ImageIcon("../sprite/monster_1.png");
 				JLabel m1 = new JLabel();
 				m1.setIcon(monster_1);
 				pan.add(m1);
 				break;
 			case 'J':
-				Icon monster_2 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\monster_2.png");
+				Icon monster_2 = new ImageIcon("../sprite/monster_2.png");
 				JLabel m2 = new JLabel();
 				m2.setIcon(monster_2);
 				pan.add(m2);
 				break;
 			case 'K':
-				Icon monster_3 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\monster_3.png");
+				Icon monster_3 = new ImageIcon("../sprite/monster_3.png");
 				JLabel m3 = new JLabel();
 				m3.setIcon(monster_3);
 				pan.add(m3);
 				break;
 			case 'L':
-				Icon monster_4 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\monster_4.png");
+				Icon monster_4 = new ImageIcon("../sprite/monster_4.png");
 				JLabel m4 = new JLabel();
 				m4.setIcon(monster_4);
 				pan.add(m4);
 				break;
 			case 'M':
-				Icon purse = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\purse.png");
+				Icon purse = new ImageIcon("../sprite/purse.png");
 				JLabel p = new JLabel();
 				p.setIcon(purse);
 				pan.add(p);
 				break;
 			case 'N':
-				Icon empty = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\empty.png");
+				Icon empty = new ImageIcon("../sprite/empty.png");
 				JLabel empt = new JLabel();
 				empt.setIcon(empty);
 				pan.add(empt);
