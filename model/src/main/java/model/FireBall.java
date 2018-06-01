@@ -1,38 +1,53 @@
 package model;
-/**
- * @author Alyssa
- *
- */
-public class FireBall {
-	private int x;
-	private int y;
-	public FireBall(int x, int y)
-	{
-		this.x = x;
-		this.y = y;
+
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
+public class FireBall extends MobileElements{
+	
+	Image Fireball;
+	int FireBall_Type = 0;
+	
+	ImageIcon FireBall1 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\fireball_1.png");
+	ImageIcon FireBall2 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\fireball_2.png");
+	ImageIcon FireBall3 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\fireball_3.png");
+	ImageIcon FireBall4 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\fireball_4.png");
+	ImageIcon FireBall5 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\fireball_5.png");
+
+	public FireBall(int OriginX, int OriginY){
+		x = OriginX;
+		y = OriginY;
+
+		ImageIcon Fire_ball = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\fireball_1.png");
+		Fireball = Fire_ball.getImage();
 	}
-	/**
-	 * @return the x
-	 */
-	public int getX() {
-		return x;
-	}
-	/**
-	 * @param x the x to set
-	 */
-	public void setX(int x) {
-		this.x = x;
-	}
-	/**
-	 * @return the y
-	 */
-	public int getY() {
-		return y;
-	}
-	/**
-	 * @param y the y to set
-	 */
-	public void setY(int y) {
-		this.y = y;
-	}
+		public Image getImage(){
+			switch (FireBall_Type) {
+			
+			case 1:
+				Fireball = FireBall1.getImage();
+			break;
+			
+			case 2:
+				Fireball = FireBall2.getImage();
+			break;
+			
+			case 3:
+				Fireball = FireBall3.getImage();
+			break;
+			
+			case 4:
+				Fireball = FireBall4.getImage();
+			break;
+			
+			case 5:
+				Fireball = FireBall5.getImage();
+			break;
+			}
+		 return Fireball;
+		}
+	
+	
+
 }

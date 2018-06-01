@@ -1,38 +1,24 @@
 package model;
-/**
- * @author Alyssa
- *
- */
-public class Monster_2 {
-	private int x;
-	private int y;
-	public Monster_2(int x, int y)
-	{
-		this.x = x;
-		this.y = y;
+
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
+public class Monster_2 extends MobileElements{
+	
+	Image Monster_2;
+	
+	public Monster_2(int OriginX, int OriginY){
+		x = OriginX;
+		y = OriginY;
+		
+		ImageIcon Monster2 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\monster_2.png");
+		Monster_2 = Monster2.getImage();
 	}
-	/**
-	 * @return the x
-	 */
-	public int getX() {
-		return x;
+	
+	public Image getImage(){
+		return Monster_2;
 	}
-	/**
-	 * @param x the x to set
-	 */
-	public void setX(int x) {
-		this.x = x;
-	}
-	/**
-	 * @return the y
-	 */
-	public int getY() {
-		return y;
-	}
-	/**
-	 * @param y the y to set
-	 */
-	public void setY(int y) {
-		this.y = y;
-	}
+
+
 }

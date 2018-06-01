@@ -1,38 +1,27 @@
 package model;
-/**
- * @author Alyssa
- *
- */
-public class Bone_V {
-	private int x;
-	private int y;
-	public Bone_V(int x, int y)
-	{
-		this.x = x;
-		this.y = y;
+
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
+public class Bone_V extends Walls{
+
+	Image BoneV;
+	
+	public Bone_V(int OriginX, int OriginY) {
+		
+		this.x = OriginX;
+		this.y = OriginY;
+		
+		ImageIcon BoneVImg = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\vertical_bone.png");
+		BoneV = BoneVImg.getImage();
 	}
-	/**
-	 * @return the x
-	 */
-	public int getX() {
-		return x;
+	
+	
+	public Image getImage() {
+		
+		return BoneV;
+		
 	}
-	/**
-	 * @param x the x to set
-	 */
-	public void setX(int x) {
-		this.x = x;
-	}
-	/**
-	 * @return the y
-	 */
-	public int getY() {
-		return y;
-	}
-	/**
-	 * @param y the y to set
-	 */
-	public void setY(int y) {
-		this.y = y;
-	}
+	
 }

@@ -1,38 +1,27 @@
 package model;
-/**
- * @author Alyssa
- *
- */
-public class Crystal_Ball {
-	private int x;
-	private int y;
-	public Crystal_Ball(int x, int y)
-	{
-		this.x = x;
-		this.y = y;
+
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
+public class Crystal_Ball extends Uncrossable {
+	
+Image CrystalBall;
+	
+	public Crystal_Ball(int OriginX, int OriginY) {
+		
+		this.x = OriginX;
+		this.y = OriginY;
+		
+		ImageIcon CrystalBallImg = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\crystal_ball.png");
+		CrystalBall = CrystalBallImg.getImage();
 	}
-	/**
-	 * @return the x
-	 */
-	public int getX() {
-		return x;
+	
+	
+	public Image getImage() {
+		
+		return CrystalBall;
+		
 	}
-	/**
-	 * @param x the x to set
-	 */
-	public void setX(int x) {
-		this.x = x;
-	}
-	/**
-	 * @return the y
-	 */
-	public int getY() {
-		return y;
-	}
-	/**
-	 * @param y the y to set
-	 */
-	public void setY(int y) {
-		this.y = y;
-	}
+	
 }

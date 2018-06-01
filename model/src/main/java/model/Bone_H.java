@@ -1,47 +1,27 @@
 package model;
 
-/**
- * @author Alyssa
- *
- */
-public class Bone_H {
+import java.awt.Image;
 
-	private int x;
-	private int y;
+import javax.swing.ImageIcon;
 
-	public Bone_H(int x, int y) {
-		this.x = x;
-		this.y = y;
+public class Bone_H extends Walls{
+
+	Image BoneH;
+	
+	public Bone_H(int OriginX, int OriginY) {
+		
+		this.x = OriginX;
+		this.y = OriginY;
+		
+		ImageIcon BoneHImg = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\horizontal_bone.png");
+		BoneH = BoneHImg.getImage();
 	}
-
-	/**
-	 * @return the x
-	 */
-	public int getX() {
-		return x;
+	
+	
+	public Image getImage() {
+		
+		return BoneH;
+		
 	}
-
-	/**
-	 * @param x
-	 *            the x to set
-	 */
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	/**
-	 * @return the y
-	 */
-	public int getY() {
-		return y;
-	}
-
-	/**
-	 * @param y
-	 *            the y to set
-	 */
-	public void setY(int y) {
-		this.y = y;
-	}
-
+	
 }
