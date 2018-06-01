@@ -26,15 +26,14 @@ public class ViewFacade implements IView {
 
 	@Override
 	public final void displayMessage(final String message) {
-		JOptionPane.showMessageDialog(null, message);
-		System.out.println("|Passage View| ");
+//		JOptionPane.showMessageDialog(null, message);
+		System.out.println("- Affichage Map");
 
 		StringBuffer map = new StringBuffer(message);
 		map.delete(0, 4);
 
 		JFrame window = new JFrame();
 		String level = new String(map);
-		System.out.println("|Passage Ecran|");
 
 		window.setSize(769, 468);
 		window.setTitle("Lorann Game");
