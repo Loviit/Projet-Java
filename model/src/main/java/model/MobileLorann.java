@@ -10,21 +10,21 @@ public class MobileLorann extends MobileElements {
 	
 	
 	Image LorannImg;
-	ImageIcon LorannDown = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_b.png");
-	ImageIcon LorannDownLeft = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_bl.png");
-	ImageIcon LorannDownRight = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_br.png");
-	ImageIcon LorannRight = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_r.png");
-	ImageIcon LorannLeft = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_l.png");
-	ImageIcon LorannUp = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_u.png");
-	ImageIcon LorannUpLeft = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_ul.png");
-	ImageIcon LorannUpRight = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_ur.png");
+	ImageIcon LorannDown = new ImageIcon("../sprite/lorann_b.png");
+	ImageIcon LorannDownLeft = new ImageIcon("../sprite/lorann_bl.png");
+	ImageIcon LorannDownRight = new ImageIcon("../sprite/lorann_br.png");
+	ImageIcon LorannRight = new ImageIcon("../sprite/lorann_r.png");
+	ImageIcon LorannLeft = new ImageIcon("../sprite/lorann_l.png");
+	ImageIcon LorannUp = new ImageIcon("../sprite/lorann_u.png");
+	ImageIcon LorannUpLeft = new ImageIcon("../sprite/lorann_ul.png");
+	ImageIcon LorannUpRight = new ImageIcon("../sprite/lorann_ur.png");
 	
 	
 	public MobileLorann(int OriginX,int OriginY){
 		this.x = OriginX;
 		this.y = OriginY;
 		
-		ImageIcon Lorann_Img = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\lorann_b.png");
+		ImageIcon Lorann_Img = new ImageIcon("../sprite/lorann_b.png");
 		LorannImg = Lorann_Img.getImage();
 	}
 	

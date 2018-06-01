@@ -13,7 +13,7 @@ public class Bone_H extends Walls{
 		this.x = OriginX;
 		this.y = OriginY;
 		
-		ImageIcon BoneHImg = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\horizontal_bone.png");
+		ImageIcon BoneHImg = new ImageIcon("../sprite/horizontal_bone.png");
 		BoneH = BoneHImg.getImage();
 	}
 	

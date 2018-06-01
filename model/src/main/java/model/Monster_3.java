@@ -12,7 +12,7 @@ public class Monster_3 extends MobileElements{
 		x = OriginX;
 		y = OriginY;
 		
-		ImageIcon Monster3 = new ImageIcon("C:\\Users\\fifib\\Desktop\\sprite\\monster_3.png");
+		ImageIcon Monster3 = new ImageIcon("../sprite/monster_3.png");
 		Monster_3 = Monster3.getImage();
 	}
 	
