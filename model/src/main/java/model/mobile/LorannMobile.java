@@ -1,5 +1,6 @@
 package model.mobile;
 
+import model.MobileLorann;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,8 @@ public class LorannMobile extends Sprite {
 	private int dx;
 	private int dy;
 	private List<Missile> missiles;
+	
+	MobileLorann lorann;
 
 	public LorannMobile(int x, int y) {
 		super(x, y);
@@ -19,7 +22,8 @@ public class LorannMobile extends Sprite {
 	private void initLorannMobile() {
 
 		missiles = new ArrayList<>();
-
+		
+	//	lorann = new MobileLorann(x*32, y*32);
 		loadImage("../sprite/lorann_b.png");
 		getImageDimensions();
 	}
@@ -64,7 +68,7 @@ public class LorannMobile extends Sprite {
 	}
 
 	public void fire() {
-		missiles.add(new Missile(x + width, y + height / 2));
+		missiles.add(new Missile(x, y));
 	}
 
 	public void keyReleased(KeyEvent e) {
