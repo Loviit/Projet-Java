@@ -40,6 +40,8 @@ public class Map {
 
 	@Override
 	public String toString() {
+		System.out.println("- Récupération des caractères");
 		return this.getId() + " : " + this.getMap();
+        
 	}
 }

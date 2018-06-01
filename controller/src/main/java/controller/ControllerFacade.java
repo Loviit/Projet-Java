@@ -1,10 +1,7 @@
 package controller;
 
 import java.sql.SQLException;
-import java.util.List;
-import java.util.logging.Level;
 
-import model.Map;
 import model.IModel;
 import view.IView;
 
@@ -45,8 +42,9 @@ public class ControllerFacade implements IController {
     
     
     public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getMapById(4).toString());
-        
+
+        this.getView().displayMessage(this.getModel().getMapById(5).toString());
+       
 //        this.getView().displayMessage(this.getModel().getMapById(2).toString());
 
 //       this.getView().displayMessage(this.getModel().getMapById(3).toString());
@@ -91,7 +89,6 @@ public class ControllerFacade implements IController {
 
 	@Override
 	public void CommandEffect(ControllerCommand controllerCommand) {
-		// TODO Auto-generated method stub
 		switch (controllerCommand) {
 /*		case Map1:
 			this.model.loadMap("MAP1");

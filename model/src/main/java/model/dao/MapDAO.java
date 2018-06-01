@@ -47,6 +47,7 @@ public class MapDAO extends AbstractDAO {
      *             the SQL exception
      */
     public static Map getMapById(final int id) throws SQLException {
+        System.out.println("- ouverture DAO");
         final CallableStatement callStatement = prepareCall(sqlMapById);
         Map map = null;
         callStatement.setInt(1, id);
