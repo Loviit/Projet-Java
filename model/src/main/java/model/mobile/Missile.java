@@ -1,6 +1,5 @@
 package model.mobile;
 
-
 public class Missile extends Sprite {
 
     private final int BOARD_WIDTH = 390;

@@ -16,6 +16,7 @@ import javax.swing.JPanel;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
+
 public class ViewFacade implements IView {
 
 	String map = "";

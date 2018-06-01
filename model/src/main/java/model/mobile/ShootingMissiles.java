@@ -3,6 +3,7 @@ package model.mobile;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 
+
 public class ShootingMissiles extends JFrame {
 
     /**
