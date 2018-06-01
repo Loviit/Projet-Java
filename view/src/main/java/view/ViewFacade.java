@@ -171,11 +171,17 @@ public class ViewFacade implements IView {
      * (non-Javadoc)
      * @see view.IView#displayMessage(java.lang.String)
      */
+	String chaine = "";
+	
     @Override
     public final void displayMessage(final String message) {
         JOptionPane.showMessageDialog(null, message);
         System.out.println("|Passage View| ");
-        System.out.println(message);
+        
+        StringBuffer chaine = new StringBuffer(message);
+        chaine.delete(0, 4);
+      
+        System.out.println(chaine);
     }
 
 }
