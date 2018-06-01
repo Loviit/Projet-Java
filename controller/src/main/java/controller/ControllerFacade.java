@@ -2,6 +2,7 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
 
 import model.Map;
 import model.IModel;
@@ -41,6 +42,8 @@ public class ControllerFacade implements IController {
      * @throws SQLException
      *             the SQL exception
      */
+    
+    
     public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getMapById(1).toString());
         
@@ -49,6 +52,8 @@ public class ControllerFacade implements IController {
         this.getView().displayMessage(this.getModel().getMapById(3).toString());
         
         this.getView().displayMessage(this.getModel().getMapById(4).toString());
+        
+        this.getView().displayMessage(this.getModel().getMapById(5).toString());
 
 //        final List<Map> maps = this.getModel().getAllMaps();
 //        final StringBuilder message = new StringBuilder();
