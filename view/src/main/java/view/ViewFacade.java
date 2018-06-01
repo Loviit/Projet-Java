@@ -174,6 +174,7 @@ public class ViewFacade implements IView {
     @Override
     public final void displayMessage(final String message) {
         JOptionPane.showMessageDialog(null, message);
+        System.out.println("|Passage View| ");
         System.out.println(message);
     }
 

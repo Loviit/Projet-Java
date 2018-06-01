@@ -44,17 +44,20 @@ public class ControllerFacade implements IController {
     public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getMapById(1).toString());
         
-        this.getView().displayMessage(this.getModel().getMapByKey("MAP2").toString());
+        this.getView().displayMessage(this.getModel().getMapById(2).toString());
 
-        this.getView().displayMessage(this.getModel().getMapByMap("FGGGGGFGGGGGGGGFGGFNHNNNNNFNMNMNMNFFNNHFHNANNNFFNNNNNFFNNNHFHNNNNNNFFNNINFNNNNHFHNNNFFNNFFNNFFNNNNHFHNFFFNNNNFNFFNNNNNHFFFFNNNJNFCFNKNNFFMHFHNNMNNNFNFNNNNNNFFHFHNMNNFFFNNLNNFFNNFFFHMNNFFNNNNNNNNFFNNNFFGGGFGGGGGGGGGGFFNDFNFFFFFFFFFFFFFFFFFFF").toString());
+        this.getView().displayMessage(this.getModel().getMapById(3).toString());
+        
+        this.getView().displayMessage(this.getModel().getMapById(4).toString());
 
-        final List<Map> maps = this.getModel().getAllMaps();
-        final StringBuilder message = new StringBuilder();
-        for (final Map map : maps) {
-            message.append(map);
-            message.append('\n');
-        }
-        this.getView().displayMessage(message.toString());
+//        final List<Map> maps = this.getModel().getAllMaps();
+//        final StringBuilder message = new StringBuilder();
+//        for (final Map map : maps) {
+//            message.append(map);
+//            message.append('\n');
+//        }
+        
+//        this.getView().displayMessage(message.toString());
     }
 
     /**
