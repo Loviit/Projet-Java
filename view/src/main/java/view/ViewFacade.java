@@ -52,6 +52,7 @@ public class ViewFacade implements IView {
 				JLabel l = new JLabel();
 				l.setIcon(laurann);
 				pan.add(l);
+				pan.add(l, (25));
 				break;
 			case 'B':
 				Icon fireball = new ImageIcon("../sprite/fireball.gif");
