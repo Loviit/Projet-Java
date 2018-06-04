@@ -24,7 +24,7 @@ public class MobileLorann extends MobileElements {
 		this.x = OriginX;
 		this.y = OriginY;
 		
-		ImageIcon Lorann_Img = new ImageIcon("../sprite/lorann_b.png");
+		ImageIcon Lorann_Img = new ImageIcon("../sprite/lorann.gif");
 		LorannImg = Lorann_Img.getImage();
 	}
 	
