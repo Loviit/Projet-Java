@@ -117,31 +117,31 @@ public class LorannMobile extends Sprite {
 		if (key == KeyEvent.VK_SPACE) {
 			fire();
 			System.out.println("FEU !!!");
-			d = 0;
+		//	d = 0;
 		}
 
 		if (key == KeyEvent.VK_LEFT) {
 			dx = -32;
 			System.out.println("gauche !!!");
-			d = 2;
+		//	d = 2;
 		}
 
 		if (key == KeyEvent.VK_RIGHT) {
 			dx = 32;
 			System.out.println("droite !!!");
-			d = 4;
+		//	d = 4;
 		}
 
 		if (key == KeyEvent.VK_UP) {
 			dy = -32;
 			System.out.println("en haut!!!");
-			d = 3;
+		//	d = 3;
 		}
 
 		if (key == KeyEvent.VK_DOWN) {
 			dy = 32;
 			System.out.println("en bas !!!");
-			d = 1;
+		//	d = 1;
 		}
 	}
 
