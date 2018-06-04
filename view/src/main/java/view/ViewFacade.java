@@ -7,7 +7,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -48,7 +48,7 @@ public class ViewFacade implements IView {
 			char caracter = level.charAt(i);
 			switch (caracter) {
 			case 'A':
-				Icon laurann = new ImageIcon("../sprite/Laurann.gif");
+				Icon laurann = new ImageIcon("../sprite/Lorann.gif");
 				JLabel l = new JLabel();
 				l.setIcon(laurann);
 				pan.add(l);
