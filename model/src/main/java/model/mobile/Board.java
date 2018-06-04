@@ -15,20 +15,24 @@ import javax.swing.Timer;
 public class Board extends JPanel implements ActionListener {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private final int ICRAFT_X = 40;
+     * 
+     */
+    private static final long serialVersionUID = -8246000947640347114L;
+    private final int ICRAFT_X = 40;
     private final int ICRAFT_Y = 60;
-    private final int DELAY = 10;
+    private final int DELAY = 150;
     private Timer timer;
-    private LorannMobile lorannMobile;
+    private LorannMobile loranMobile;
 
+    /**
+     * Instantiates a new Board.
+     */
     public Board() {
 
         initBoard();
     }
 
+    
     private void initBoard() {
 
         addKeyListener(new TAdapter());
@@ -36,7 +40,7 @@ public class Board extends JPanel implements ActionListener {
         setBackground(Color.BLACK);
         setDoubleBuffered(true);
 
-        lorannMobile = new LorannMobile(ICRAFT_X, ICRAFT_Y);
+        loranMobile = new LorannMobile(ICRAFT_X, ICRAFT_Y);
 
         timer = new Timer(DELAY, this);
         timer.start();
@@ -54,14 +58,14 @@ public class Board extends JPanel implements ActionListener {
     private void doDrawing(Graphics g) {
 
         Graphics2D g2d = (Graphics2D) g;
-        
-        g2d.drawImage(lorannMobile.getImage(), lorannMobile.getX(),
-                lorannMobile.getY(), this);
 
-        List<Missile> missiles = lorannMobile.getMissiles();
+        g2d.drawImage(loranMobile.getImage(), loranMobile.getX(),
+                loranMobile.getY(), this);
+
+        List<Missile> missiles = loranMobile.getMissiles();
 
         for (Missile missile : missiles) {
-            
+
             g2d.drawImage(missile.getImage(), missile.getX(),
                     missile.getY(), this);
         }
@@ -71,22 +75,23 @@ public class Board extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         updateMissiles();
-        updatelorannMobile();
+        updateLoranMobile();
+
+        int valeur1=loranMobile.Methode();
+        loranMobile.loadImage(valeur1);
 
         repaint();
     }
+private void updateMissiles() {
 
-    private void updateMissiles() {
-
-        List<Missile> missiles = lorannMobile.getMissiles();
+        List<Missile> missiles = loranMobile.getMissiles();
 
         for (int i = 0; i < missiles.size(); i++) {
 
             Missile missile = missiles.get(i);
+if (missile.isVisible()) {
 
-            if (missile.isVisible()) {
-
-                missile.move();
+                missile.move(loranMobile.direction());
             } else {
 
                 missiles.remove(i);
@@ -94,21 +99,22 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private void updatelorannMobile() {
+    private void updateLoranMobile() {
 
-        lorannMobile.move();
+        loranMobile.move();
     }
 
     private class TAdapter extends KeyAdapter {
 
         @Override
         public void keyReleased(KeyEvent e) {
-            lorannMobile.keyReleased(e);
+           loranMobile.keyReleased(e);
         }
 
         @Override
         public void keyPressed(KeyEvent e) {
-            lorannMobile.keyPressed(e);
+            loranMobile.keyPressed(e);
+ 
         }
     }
 }

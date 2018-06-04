@@ -12,6 +12,11 @@ public class Sprite {
     protected boolean visible;
     protected Image image;
 
+    /**
+     * Instantiates a Sprite
+     * @param x
+     * @param y
+     */
     public Sprite(int x, int y) {
 
         this.x = x;
@@ -23,7 +28,7 @@ public class Sprite {
 
         ImageIcon ii = new ImageIcon(imageName);
         image = ii.getImage();
-    }
+    } 
     
     protected void getImageDimensions() {
 

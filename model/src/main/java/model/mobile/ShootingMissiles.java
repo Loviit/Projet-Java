@@ -11,6 +11,9 @@ public class ShootingMissiles extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Instantiates ShootingMissiles
+	 */
 	public ShootingMissiles() {
         
         initUI();
@@ -20,7 +23,7 @@ public class ShootingMissiles extends JFrame {
         
         add(new Board());
         
-        setSize(400, 300);
+        setSize(800, 600);
         setResizable(false);
         
         setTitle("Shooting missiles");
