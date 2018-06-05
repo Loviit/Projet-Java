@@ -9,6 +9,9 @@ import java.util.List;
  *
  * @author Alyssa BINARD
  * @version 1.0
+ * @see KeyEvent
+ * @see ArrayList
+ * @see List
  */
 public class LorannMobile extends Sprite {
 	/** The dx. */

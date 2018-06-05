@@ -17,6 +17,17 @@ import javax.swing.Timer;
  *
  * @author Alyssa BINARD
  * @version 1.0
+ * @see Color
+ * @see Graphics
+ * @see Graphics2D
+ * @see Toolkit
+ * @see ActionEvent
+ * @see ActionListener
+ * @see KeyAdapter
+ * @see KeyEvent
+ * @see List
+ * @see JPanel
+ * @see Timer
  */
 public class Board extends JPanel implements ActionListener {
 

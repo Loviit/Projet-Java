@@ -8,6 +8,8 @@ import javax.swing.ImageIcon;
  *
  * @author Alyssa BINARD
  * @version 1.0
+ * @see Image
+ * @see ImageIcon
  */
 
 public class Sprite {

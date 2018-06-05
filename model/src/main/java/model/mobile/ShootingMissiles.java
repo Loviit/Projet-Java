@@ -9,6 +9,8 @@ import javax.swing.JFrame;
  *
  * @author Alyssa BINARD
  * @version 1.0
+ * @see EventQueue
+ * @see JFrame
  */
 public class ShootingMissiles extends JFrame {
 
