@@ -5,7 +5,8 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 
 /**
- * <h1>The Class MobileLorann.</h1>
+ * <h1>The Class MobileLorann allows the initialization and downloading of
+ * Lorann.</h1>
  *
  * @author Alyssa
  * @version 1.0
@@ -13,10 +14,10 @@ import javax.swing.ImageIcon;
  * @see ImageIcon
  */
 public class MobileLorann extends MobileElements {
-	
+
 	/** the Lorann */
 	public static Object Lorann;
-	
+
 	/** the image Lorann */
 	Image LorannImg;
 	/** Load the image loranndown */
@@ -27,44 +28,45 @@ public class MobileLorann extends MobileElements {
 	ImageIcon LorannLeft = new ImageIcon("../sprite/lorann_l.png");
 	/** Load the image lorannUp */
 	ImageIcon LorannUp = new ImageIcon("../sprite/lorann_u.png");
-	
+
 	/**
-	 * Mobile Lorann
-	 * Initialize the x and y.
+	 * Mobile Lorann Initialize the x and y.
+	 * 
 	 * @param OriginX
 	 * @param OriginY
 	 */
-	public MobileLorann(int OriginX,int OriginY){
+	public MobileLorann(int OriginX, int OriginY) {
 		this.x = OriginX;
 		this.y = OriginY;
-		
+
 		ImageIcon Lorann_Img = new ImageIcon("../sprite/lorann.gif");
 		LorannImg = Lorann_Img.getImage();
 	}
-	
+
 	/**
 	 * Method to display the correct sprite according to the character's movement.
+	 * 
 	 * @return LorannImg.
 	 */
-	public Image getImage(){
-		
+	public Image getImage() {
+
 		switch (this.getWay()) {
-		
+
 		case "UP":
 			LorannImg = LorannUp.getImage();
-		break;
-		
+			break;
+
 		case "RIGHT":
 			LorannImg = LorannRight.getImage();
-		break;
-		
+			break;
+
 		case "LEFT":
 			LorannImg = LorannLeft.getImage();
-		break;
-		
+			break;
+
 		case "DOWN":
 			LorannImg = LorannDown.getImage();
-		break;	
+			break;
 		}
 		return LorannImg;
 	}

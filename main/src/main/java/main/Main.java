@@ -9,7 +9,7 @@ import view.ViewFacade;
 /**
  * <h1>The Class Main.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Groupe BINARD BOUCHARD-VW FERAT GENTILS
  * @version 1.0
  * @see ControllerFacade
  * @see ModelFacade

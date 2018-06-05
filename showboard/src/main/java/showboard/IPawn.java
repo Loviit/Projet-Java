@@ -8,7 +8,7 @@ import java.awt.Point;
  * A class can implement the IPawn interface when it wants to move on a IBoard.
  * </p>
  *
- * @author Anne-Emilie DIET
+ * @author Groupe BINARD BOUCHARD-VW FERAT GENTILSF
  * @version 1.1
  * @see IBoard
  * @see ISquare

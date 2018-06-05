@@ -4,7 +4,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 
 /**
- * <h1>The Class Crystal_Ball.</h1>
+ * <h1>The Class Crystal_Ball allows the initialization and downloading of Crystal_Ball.</h1>
  *
  * @author Alyssa
  * @version 1.0

@@ -8,7 +8,7 @@ import model.dao.MapDAO;
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Groupe BINARD
  * @version 1.0
  * @see SQLException
  * @see List

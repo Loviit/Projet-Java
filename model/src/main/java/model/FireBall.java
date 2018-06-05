@@ -5,7 +5,8 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 
 /**
- * <h1>The Class Fireball.</h1>
+ * <h1>The Class Fireball allows the initialization and downloading of
+ * Fireball.</h1>
  *
  * @author Alyssa
  * @version 1.0

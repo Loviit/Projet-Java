@@ -5,7 +5,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 
 /**
- * <h1>The Class Bone_V.</h1>
+ * <h1>The Class Bone_V allows the initialization and downloading of Bone_V.</h1>
  *
  * @author Alyssa
  * @version 1.0

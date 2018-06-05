@@ -12,8 +12,15 @@ import javax.swing.JPanel;
 /**
  * <h1>The Class ViewFacade provides a facade of the View component.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Anthony BOUCHARD-VW and Valentin GENTILS
  * @version 1.0
+ * @see Color
+ * @see GridLayout
+ * @see Icon
+ * @see ImageIcon
+ * @see JFrame
+ * @see JLabel
+ * @see JPanel
  */
 
 public class ViewFacade implements IView {

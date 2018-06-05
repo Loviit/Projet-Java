@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * <h1>The Interface IModel.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Groupe BINARD BOUCHARD-VW FERAT GENTILS
  * @version 1.0
  */
 public interface IModel {

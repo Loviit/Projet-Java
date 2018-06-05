@@ -8,7 +8,7 @@ import view.IView;
 /**
  * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @author Groupe BINARD BOUCHARD-VW FERAT GENTILS
  * @version 1.0
  */
 public class ControllerFacade implements IController {
