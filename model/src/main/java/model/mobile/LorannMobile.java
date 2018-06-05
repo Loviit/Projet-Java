@@ -1,12 +1,8 @@
 package model.mobile;
 
-import model.MobileLorann;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
-//import controller.ControllerCommand;
-//import java.awt.Image;
-//import javax.swing.ImageIcon;
 
 /**
  * <h1>The Class LorannMobile allows the mobility of the main character.</h1>
@@ -15,15 +11,14 @@ import java.util.List;
  * @version 1.0
  */
 public class LorannMobile extends Sprite {
+	/** The dx. */
 	private int dx;
+	/** The dy. */
 	private int dy;
+	/** The valeur receives Methode. */
 	int valeur = Methode();
-	// loadImage(valeur);
+	/** The list Missiles. */
 	private List<Missile> missiles;
-	// public int valeur = 0;
-	public int d = 0;
-
-	MobileLorann lorann;
 
 	/**
 	 * Instantiates a new LorannMobile.
@@ -38,6 +33,11 @@ public class LorannMobile extends Sprite {
 		initLorannMobile();
 	}
 
+	/**
+	 * load the Image.
+	 * 
+	 * @param valeur
+	 */
 	public void loadImage(int valeur) {
 		if (valeur == 1) {
 			loadImage("../sprite/lorann_r.png");
@@ -62,24 +62,19 @@ public class LorannMobile extends Sprite {
 		}
 	}
 
+	/**
+	 * Initialize Lorann Mobile.
+	 */
 	private void initLorannMobile() {
 
 		missiles = new ArrayList<>();
-
-		/*
-		 * if (valeur == 0) { loadImage("C:\\Users\\fifib\\Downloads\\lorann.gif");
-		 * getImageDimensions(); } if (valeur == 1) {
-		 * loadImage("../sprite/lorann_b.png"); getImageDimensions(); } if (valeur == 2)
-		 * { loadImage("../sprite/lorann_l.png"); getImageDimensions(); } if (valeur ==
-		 * 3) { loadImage("../sprite/lorann_u.png"); getImageDimensions(); } if (valeur
-		 * == 4) { loadImage("../sprite/lorann_r.png"); getImageDimensions(); }
-		 */
-
-		// lorann = new MobileLorann(x*32, y*32);
-		// loadImage("../sprite/lorann_b.png");
-		// getImageDimensions();
 	}
 
+	/**
+	 * Transition to know the direction.
+	 * 
+	 * @return valor.
+	 */
 	public int Methode() {
 		if (dx == 32) {
 			return 1;
@@ -100,15 +95,28 @@ public class LorannMobile extends Sprite {
 
 	}
 
+	/**
+	 * The move changes the coordinates of the sprite.
+	 */
 	public void move() {
 		x += dx;
 		y += dy;
 	}
 
+	/**
+	 * Get the missiles. Called from the Board class
+	 * 
+	 * @return missiles
+	 */
 	public List<Missile> getMissiles() {
 		return missiles;
 	}
 
+	/**
+	 * KeyPressed
+	 * 
+	 * @param e
+	 */
 	public void keyPressed(KeyEvent e) {
 
 		int key = e.getKeyCode();
@@ -123,46 +131,41 @@ public class LorannMobile extends Sprite {
 		if (key == KeyEvent.VK_SPACE) {
 			fire();
 			System.out.println("FEU !!!");
-			// d = 0;
 		}
 
 		if (key == KeyEvent.VK_LEFT) {
 			dx = -32;
 			System.out.println("gauche !!!");
-			// d = 2;
 		}
 
 		if (key == KeyEvent.VK_RIGHT) {
 			dx = 32;
 			System.out.println("droite !!!");
-			// d = 4;
 		}
 
 		if (key == KeyEvent.VK_UP) {
 			dy = -32;
 			System.out.println("en haut!!!");
-			// d = 3;
 		}
 
 		if (key == KeyEvent.VK_DOWN) {
 			dy = 32;
 			System.out.println("en bas !!!");
-			// d = 1;
 		}
 	}
 
-	public int getD() {
-		return d;
-	}
-
-	public void setD(int d) {
-		this.d = d;
-	}
-
+	/**
+	 * Creates a new Missile object and adds it to the list of missiles.
+	 */
 	public void fire() {
 		missiles.add(new Missile(x, y, direction()));
 	}
 
+	/**
+	 * Released the key.
+	 * 
+	 * @param e
+	 */
 	public void keyReleased(KeyEvent e) {
 
 		int key = e.getKeyCode();
@@ -184,6 +187,11 @@ public class LorannMobile extends Sprite {
 		}
 	}
 
+	/**
+	 * Give the direction.
+	 * 
+	 * @return
+	 */
 	public int direction() {
 		if (dx < 0) {
 			return 1;

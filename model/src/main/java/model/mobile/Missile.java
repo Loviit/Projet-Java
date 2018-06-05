@@ -7,7 +7,7 @@ package model.mobile;
  * @version 1.0
  */
 public class Missile extends Sprite {
-	
+
 	/** The Missile speed. */
 	private final int MISSILE_SPEED = 32;
 	/** The shoot. */
@@ -36,53 +36,48 @@ public class Missile extends Sprite {
 		loadImage("../sprite/fireball.gif");
 		getImageDimensions();
 	}
-	
 
 	/**
 	 * The move of the Missile.
+	 * 
 	 * @param direction
 	 */
 	public void move(int direction) {
-        
-     //   x += MISSILE_SPEED;
-      //  x -= MISSILE_SPEED;
-    	
-      if(tirer==true) {
-          if(directions == "RIGHT") {
-          x += MISSILE_SPEED;
-            }
-          if(directions == "LEFT") {
-              x -= MISSILE_SPEED;
-                }
-                if(directions == "DOWN") {
-                    y += MISSILE_SPEED;
-                }
-                if(directions == "UP") {
-                    y -= MISSILE_SPEED;
-                }
-              
-      		}
-      else {
-          if(direction==1) { 
-                 tirer = true;
-                 directions="RIGHT";
-              x += MISSILE_SPEED;
-             }
-             if(direction==2) {
-                 tirer = true;
-                 directions="LEFT";
-              x-= MISSILE_SPEED;
-             }
-             if(direction==3) {
-                 tirer = true;
-                 directions="DOWN";
-              y+=MISSILE_SPEED;
-             }
-             if(direction==4) {
-                 tirer = true;
-                 directions="UP";
-              y-=MISSILE_SPEED;
-             }
-      }
+		if (tirer == true) {
+			if (directions == "RIGHT") {
+				x += MISSILE_SPEED;
+			}
+			if (directions == "LEFT") {
+				x -= MISSILE_SPEED;
+			}
+			if (directions == "DOWN") {
+				y += MISSILE_SPEED;
+			}
+			if (directions == "UP") {
+				y -= MISSILE_SPEED;
+			}
+
+		} else {
+			if (direction == 1) {
+				tirer = true;
+				directions = "RIGHT";
+				x += MISSILE_SPEED;
+			}
+			if (direction == 2) {
+				tirer = true;
+				directions = "LEFT";
+				x -= MISSILE_SPEED;
+			}
+			if (direction == 3) {
+				tirer = true;
+				directions = "DOWN";
+				y += MISSILE_SPEED;
+			}
+			if (direction == 4) {
+				tirer = true;
+				directions = "UP";
+				y -= MISSILE_SPEED;
+			}
+		}
 	}
 }

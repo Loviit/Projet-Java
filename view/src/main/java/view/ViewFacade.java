@@ -7,7 +7,6 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-//import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -19,31 +18,44 @@ import javax.swing.JPanel;
 
 public class ViewFacade implements IView {
 
+	/** The map. */
 	String map = "";
 
+	/** The constructor ViewFacade. */
 	public ViewFacade() {
 	}
 
+	/**
+	 * Initialize the map.
+	 * displayMessage create the windows.
+	 * Recovers the database.
+	 */
 	@Override
 	public final void displayMessage(final String message) {
-//		JOptionPane.showMessageDialog(null, message);
+		
 		System.out.println("- Affichage Map");
 
 		StringBuffer map = new StringBuffer(message);
 		map.delete(0, 4);
 
+		/** The JFrame window.*/
 		JFrame window = new JFrame();
+		/** The level */
 		String level = new String(map);
 
+		/** Create the window. */
 		window.setSize(769, 468);
 		window.setTitle("Lorann Game");
 		window.setLocationRelativeTo(null);
 		window.setResizable(false);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		/** Show the map. */
 		JPanel pan = new JPanel();
 		pan.setBackground(Color.BLACK);
 		pan.setLayout(new GridLayout(12, 20));
 
+		/** Change the letters on the map to sprite. */
 		for (int i = 0; i != 240; i++) {
 			char caracter = level.charAt(i);
 			switch (caracter) {

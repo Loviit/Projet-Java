@@ -81,12 +81,21 @@ public class ControllerFacade implements IController {
         return this.model;
     }
 
+    /**
+     * Initializes the control.
+     */
 	@Override
 	public void control() {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * (non-javadoc)
+	 * Command effect
+	 * @param controllerCommand.
+	 * 			the controller command.
+	 */
 	@Override
 	public void CommandEffect(ControllerCommand controllerCommand) {
 		switch (controllerCommand) {
