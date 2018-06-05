@@ -25,8 +25,8 @@ public class MapTest {
 	private Map map;
 
 	/**
-	 * (non-javadoc)
-	 * setUpBeforeClass
+	 * (non-javadoc) setUpBeforeClass
+	 * 
 	 * @throws Exception
 	 */
 	@BeforeClass
@@ -34,8 +34,8 @@ public class MapTest {
 	}
 
 	/**
-	 * (non-javadoc)
-	 * tearDownAfterClass
+	 * (non-javadoc) tearDownAfterClass
+	 * 
 	 * @throws Exception
 	 */
 	@AfterClass
@@ -44,6 +44,7 @@ public class MapTest {
 
 	/**
 	 * setUp
+	 * 
 	 * @throws Exception
 	 */
 	@Before
@@ -52,7 +53,8 @@ public class MapTest {
 	}
 
 	/**
-	 * tearDown
+	 * (non-javadoc) tearDown
+	 * 
 	 * @throws Exception
 	 */
 	@After
@@ -67,22 +69,14 @@ public class MapTest {
 		final int expected = 1;
 		assertEquals(expected, this.map.getId());
 	}
-/*
-	
-	@Test
-    public void testSetMap() {
-        String expected = "Map";
-        assertEquals(expected, this.map.getMap());
-        expected = "map modified";
-        this.map.setMap(expected);
-        assertEquals(expected, this.map.getMap());
-    }
-
-    @Test
-    public void testToString() {
-        final String expected = "1 : Map test";
-        assertEquals(expected, this.map.toString());
-    }
-   */
+	/*
+	 * 
+	 * @Test public void testSetMap() { String expected = "Map";
+	 * assertEquals(expected, this.map.getMap()); expected = "map modified";
+	 * this.map.setMap(expected); assertEquals(expected, this.map.getMap()); }
+	 * 
+	 * @Test public void testToString() { final String expected = "1 : Map test";
+	 * assertEquals(expected, this.map.toString()); }
+	 */
 
 }
