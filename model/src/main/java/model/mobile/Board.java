@@ -12,109 +12,141 @@ import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+/**
+ * <h1>The Class Board give a Board to test the movements.</h1>
+ *
+ * @author Alyssa BINARD
+ * @version 1.0
+ */
 public class Board extends JPanel implements ActionListener {
 
-    /**
-     * 
-     */
-    private static final long serialVersionUID = -8246000947640347114L;
-    private final int ICRAFT_X = 40;
-    private final int ICRAFT_Y = 60;
-    private final int DELAY = 150;
-    private Timer timer;
-    private LorannMobile loranMobile;
+	/** The serialVersionUID */
+	private static final long serialVersionUID = -8246000947640347114L;
+	/** The CRAFT X */
+	private final int ICRAFT_X = 40;
+	/** The CRAFT Y */
+	private final int ICRAFT_Y = 60;
+	/** The DELAY */
+	private final int DELAY = 150;
+	/** The timer X */
+	private Timer timer;
+	/** The Lorann Mobile */
+	private LorannMobile loranMobile;
 
-    /**
-     * Instantiates a new Board.
-     */
-    public Board() {
+	/**
+	 * Instantiates a new Board.
+	 */
+	public Board() {
 
-        initBoard();
-    }
+		initBoard();
+	}
 
-    
-    private void initBoard() {
+	/**
+	 * Initialized the Board.
+	 */
+	private void initBoard() {
 
-        addKeyListener(new TAdapter());
-        setFocusable(true);
-        setBackground(Color.BLACK);
-        setDoubleBuffered(true);
+		addKeyListener(new TAdapter());
+		setFocusable(true);
+		setBackground(Color.BLACK);
+		setDoubleBuffered(true);
 
-        loranMobile = new LorannMobile(ICRAFT_X, ICRAFT_Y);
+		loranMobile = new LorannMobile(ICRAFT_X, ICRAFT_Y);
 
-        timer = new Timer(DELAY, this);
-        timer.start();
-    }
+		timer = new Timer(DELAY, this);
+		timer.start();
+	}
 
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
+	/**
+	 * (non-Javadoc)
+	 * Paint component.
+	 */
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 
-        doDrawing(g);
+		doDrawing(g);
 
-        Toolkit.getDefaultToolkit().sync();
-    }
+		Toolkit.getDefaultToolkit().sync();
+	}
 
-    private void doDrawing(Graphics g) {
+	/**
+	 * Dranwing the windows.
+	 * @param g
+	 */
+	private void doDrawing(Graphics g) {
 
-        Graphics2D g2d = (Graphics2D) g;
+		Graphics2D g2d = (Graphics2D) g;
 
-        g2d.drawImage(loranMobile.getImage(), loranMobile.getX(),
-                loranMobile.getY(), this);
+		g2d.drawImage(loranMobile.getImage(), loranMobile.getX(), loranMobile.getY(), this);
 
-        List<Missile> missiles = loranMobile.getMissiles();
+		List<Missile> missiles = loranMobile.getMissiles();
 
-        for (Missile missile : missiles) {
+		for (Missile missile : missiles) {
 
-            g2d.drawImage(missile.getImage(), missile.getX(),
-                    missile.getY(), this);
-        }
-    }
+			g2d.drawImage(missile.getImage(), missile.getX(), missile.getY(), this);
+		}
+	}
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
+	/**
+	 * Update Missile and Lorann.
+	 */
+	@Override
+	public void actionPerformed(ActionEvent e) {
 
-        updateMissiles();
-        updateLoranMobile();
+		updateMissiles();
+		updateLoranMobile();
 
-        int valeur1=loranMobile.Methode();
-        loranMobile.loadImage(valeur1);
+		int valeur1 = loranMobile.Methode();
+		loranMobile.loadImage(valeur1);
 
-        repaint();
-    }
-private void updateMissiles() {
+		repaint();
+	}
 
-        List<Missile> missiles = loranMobile.getMissiles();
+	/**
+	 * Update Missiles.
+	 */
+	private void updateMissiles() {
 
-        for (int i = 0; i < missiles.size(); i++) {
+		List<Missile> missiles = loranMobile.getMissiles();
 
-            Missile missile = missiles.get(i);
-if (missile.isVisible()) {
+		for (int i = 0; i < missiles.size(); i++) {
 
-                missile.move(loranMobile.direction());
-            } else {
+			Missile missile = missiles.get(i);
+			if (missile.isVisible()) {
 
-                missiles.remove(i);
-            }
-        }
-    }
+				missile.move(loranMobile.direction());
+			} else {
 
-    private void updateLoranMobile() {
+				missiles.remove(i);
+			}
+		}
+	}
 
-        loranMobile.move();
-    }
+	/**
+	 * Update Lorann.
+	 */
+	private void updateLoranMobile() {
 
-    private class TAdapter extends KeyAdapter {
+		loranMobile.move();
+	}
 
-        @Override
-        public void keyReleased(KeyEvent e) {
-           loranMobile.keyReleased(e);
-        }
+	/**
+	 * TAdapter.
+	 * @author Alyssa.
+	 *
+	 */
+	private class TAdapter extends KeyAdapter {
 
-        @Override
-        public void keyPressed(KeyEvent e) {
-            loranMobile.keyPressed(e);
- 
-        }
-    }
+		@Override
+		public void keyReleased(KeyEvent e) {
+			loranMobile.keyReleased(e);
+		}
+
+		@Override
+		public void keyPressed(KeyEvent e) {
+			loranMobile.keyPressed(e);
+
+		}
+	}
 }

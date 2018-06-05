@@ -12,82 +12,94 @@ import javax.swing.ImageIcon;
 
 public class Sprite {
 
-    protected int x;
-    protected int y;
-    protected int width;
-    protected int height;
-    protected boolean visible;
-    protected Image image;
+	/** The x. */
+	protected int x;
+	/** The y. */
+	protected int y;
+	/** The width. */
+	protected int width;
+	/** The height. */
+	protected int height;
+	/** The visible. */
+	protected boolean visible;
+	/** The image. */
+	protected Image image;
 
-    /**
-     * Instantiates a Sprite
-     * @param x
-     * @param y
-     */
-    public Sprite(int x, int y) {
+	/**
+	 * Instantiates a Sprite
+	 * 
+	 * @param x
+	 * @param y
+	 */
+	public Sprite(int x, int y) {
 
-        this.x = x;
-        this.y = y;
-        visible = true;
-    }
-    
-    
-    /**
-     * Get Image with loadImage.
-     * @param imageName
-     */
-    protected void loadImage(String imageName) {
+		this.x = x;
+		this.y = y;
+		visible = true;
+	}
 
-        ImageIcon ii = new ImageIcon(imageName);
-        image = ii.getImage();
-    } 
-    
-    /**
-     * Get Image Dimensions
-     */
-    protected void getImageDimensions() {
+	/**
+	 * Get Image with loadImage.
+	 * 
+	 * @param imageName
+	 */
+	protected void loadImage(String imageName) {
 
-        width = image.getWidth(null);
-        height = image.getHeight(null);
-    }    
+		ImageIcon ii = new ImageIcon(imageName);
+		image = ii.getImage();
+	}
 
-    /**
-     * Get Image.
-     * @return image
-     */
-    public Image getImage() {
-        return image;
-    }
+	/**
+	 * Get Image Dimensions
+	 */
+	protected void getImageDimensions() {
 
-    /**
-     * Get X
-     * @return X
-     */
-    public int getX() {
-        return x;
-    }
+		width = image.getWidth(null);
+		height = image.getHeight(null);
+	}
 
-    /**
-     * Get Y.
-     * @return Y
-     */
-    public int getY() {
-        return y;
-    }
+	/**
+	 * Get Image.
+	 * 
+	 * @return image
+	 */
+	public Image getImage() {
+		return image;
+	}
 
-    /**
-     * Booelan isVisible
-     * @return visible
-     */
-    public boolean isVisible() {
-        return visible;
-    }
+	/**
+	 * Get X
+	 * 
+	 * @return X
+	 */
+	public int getX() {
+		return x;
+	}
 
-    /**
-     * Set visible
-     * @param visible
-     */
-    public void setVisible(Boolean visible) {
-        this.visible = visible;
-    }
+	/**
+	 * Get Y.
+	 * 
+	 * @return Y
+	 */
+	public int getY() {
+		return y;
+	}
+
+	/**
+	 * Booelan isVisible
+	 * 
+	 * @return visible
+	 */
+	public boolean isVisible() {
+		return visible;
+	}
+
+	/**
+	 * Set visible
+	 * 
+	 * @param visible
+	 */
+	public void setVisible(Boolean visible) {
+		this.visible = visible;
+	}
 }

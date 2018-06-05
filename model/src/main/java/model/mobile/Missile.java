@@ -1,17 +1,36 @@
 package model.mobile;
 
+/**
+ * <h1>The Class Missile allows the mobility of missile.</h1>
+ *
+ * @author Alyssa BINARD
+ * @version 1.0
+ */
 public class Missile extends Sprite {
-
+	
+	/** The Missile speed. */
 	private final int MISSILE_SPEED = 32;
+	/** The shoot. */
 	private Boolean tirer = false;
+	/** The direction. */
 	private String directions;
 
+	/**
+	 * Instantiates a new Missile
+	 * 
+	 * @param x
+	 * @param y
+	 * @param direction
+	 */
 	public Missile(int x, int y, int direction) {
 		super(x, y);
 
 		initMissile();
 	}
 
+	/**
+	 * initializes the Missile.
+	 */
 	private void initMissile() {
 
 		loadImage("../sprite/fireball.gif");
@@ -19,6 +38,10 @@ public class Missile extends Sprite {
 	}
 	
 
+	/**
+	 * The move of the Missile.
+	 * @param direction
+	 */
 	public void move(int direction) {
         
      //   x += MISSILE_SPEED;
@@ -60,7 +83,6 @@ public class Missile extends Sprite {
                  directions="UP";
               y-=MISSILE_SPEED;
              }
-	
       }
 	}
 }

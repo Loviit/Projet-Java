@@ -8,7 +8,12 @@ import java.util.List;
 //import java.awt.Image;
 //import javax.swing.ImageIcon;
 
-
+/**
+ * <h1>The Class LorannMobile allows the mobility of the main character.</h1>
+ *
+ * @author Alyssa BINARD
+ * @version 1.0
+ */
 public class LorannMobile extends Sprite {
 	private int dx;
 	private int dy;
@@ -22,6 +27,7 @@ public class LorannMobile extends Sprite {
 
 	/**
 	 * Instantiates a new LorannMobile.
+	 * 
 	 * @param x
 	 * @param y
 	 */
@@ -98,7 +104,6 @@ public class LorannMobile extends Sprite {
 		x += dx;
 		y += dy;
 	}
-	
 
 	public List<Missile> getMissiles() {
 		return missiles;
@@ -118,31 +123,31 @@ public class LorannMobile extends Sprite {
 		if (key == KeyEvent.VK_SPACE) {
 			fire();
 			System.out.println("FEU !!!");
-		//	d = 0;
+			// d = 0;
 		}
 
 		if (key == KeyEvent.VK_LEFT) {
 			dx = -32;
 			System.out.println("gauche !!!");
-		//	d = 2;
+			// d = 2;
 		}
 
 		if (key == KeyEvent.VK_RIGHT) {
 			dx = 32;
 			System.out.println("droite !!!");
-		//	d = 4;
+			// d = 4;
 		}
 
 		if (key == KeyEvent.VK_UP) {
 			dy = -32;
 			System.out.println("en haut!!!");
-		//	d = 3;
+			// d = 3;
 		}
 
 		if (key == KeyEvent.VK_DOWN) {
 			dy = 32;
 			System.out.println("en bas !!!");
-		//	d = 1;
+			// d = 1;
 		}
 	}
 
@@ -154,9 +159,9 @@ public class LorannMobile extends Sprite {
 		this.d = d;
 	}
 
-		public void fire() { 
-			missiles.add(new Missile(x, y,direction())); 
-		}
+	public void fire() {
+		missiles.add(new Missile(x, y, direction()));
+	}
 
 	public void keyReleased(KeyEvent e) {
 
@@ -180,21 +185,18 @@ public class LorannMobile extends Sprite {
 	}
 
 	public int direction() {
-	        if(dx<0) {
-	            return 1;
-	        }
-	        if(dx>0) {
-	            return 2;
-	        }
-	        if(dy<0) {
-	            return 3;
-	        }
-	        if(dy>0) {
-	            return 4;
-	        }
-	        return 6;
-	    }
+		if (dx < 0) {
+			return 1;
+		}
+		if (dx > 0) {
+			return 2;
+		}
+		if (dy < 0) {
+			return 3;
+		}
+		if (dy > 0) {
+			return 4;
+		}
+		return 6;
+	}
 }
-
-
-
