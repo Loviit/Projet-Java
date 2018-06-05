@@ -10,6 +10,9 @@ import model.dao.MapDAO;
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
+ * @see SQLException
+ * @see List
+ * @see MapDAO
  */
 public final class ModelFacade implements IModel {
 

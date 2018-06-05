@@ -11,6 +11,9 @@ import view.ViewFacade;
  *
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
+ * @see ControllerFacade
+ * @see ModelFacade
+ * @see ViewFacade
  */
 public abstract class Main {
 

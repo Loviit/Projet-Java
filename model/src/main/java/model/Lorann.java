@@ -1,36 +1,61 @@
 package model;
+
 /**
- * @author Alyssa
+ * <h1>The Class Lorann.</h1>
  *
+ * @author Alyssa
+ * @version 1.0
  */
 public class Lorann {
+	/** The x. */
 	private int x;
+	/** The y. */
 	private int y;
-	public Lorann(int x, int y)
-	{
+
+	/**
+	 * Construtor Lorann Initialize the x and y.
+	 * 
+	 * @param x
+	 * @param y
+	 */
+	public Lorann(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
+
 	/**
+	 * Get X.
+	 * 
 	 * @return the x
 	 */
 	public int getX() {
 		return x;
 	}
+
 	/**
-	 * @param x the x to set
+	 * Set X.
+	 * 
+	 * @param x
+	 *            the x to set
 	 */
 	public void setX(int x) {
 		this.x = x;
 	}
+
 	/**
+	 * Get Y.
+	 * 
 	 * @return the y
 	 */
 	public int getY() {
 		return y;
 	}
+
 	/**
-	 * @param y the y to set
+	 * Set Y.
+	 * 
+	 * @param y
+	 *            the y to set
 	 */
 	public void setY(int y) {
 		this.y = y;

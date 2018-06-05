@@ -3,41 +3,41 @@ package model;
 import java.awt.Rectangle;
 
 /**
- * <b> Uncrossable is a class that manages the hitbox of objects that can not be crossed. </b>
- *  
- * @author ptorc
+ * <h1>The class Uncrossable</h1>
+ * 
+ * @author Alyssa
  *
  * @version 1.0
+ * @see Rectangle
  */
 public class Uncrossable {
 
+	/** The x and y */
+	int x, y;
+
 	/**
-	 * x and y coordinates of the displayed objects
-	 */
-	int x,y;
-	
-	/**
-	 * Returns the hitbox of the object
+	 * Get the bounds.
 	 * 
-	 * @return hitbox of the object
+	 * @return hitbox
 	 */
-	public Rectangle getBounds(){
-		Rectangle HitBox = new Rectangle (x,y,32,32);
+	public Rectangle getBounds() {
+		Rectangle HitBox = new Rectangle(x, y, 32, 32);
 		return HitBox;
 	}
+
 	/**
-	 * Returns the X coordinate of the object
+	 * Get X
 	 * 
-	 * @return X coordinate of the object
+	 * @return x
 	 */
 	public int getX() {
 		return x;
 	}
-	
+
 	/**
-	 * Returns the Y coordinate of the object
+	 * Get Y
 	 * 
-	 * @return Y coordinate of the object
+	 * @return Y
 	 */
 	public int getY() {
 		return y;

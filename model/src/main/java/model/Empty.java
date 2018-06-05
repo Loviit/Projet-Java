@@ -1,36 +1,61 @@
 package model;
+
 /**
- * @author Alyssa
+ * <h1>The Class Empty.</h1>
  *
+ * @author Alyssa
+ * @version 1.0
  */
 public class Empty {
+	/** The x. */
 	private int x;
+	/** The y. */
 	private int y;
-	public Empty(int x, int y)
-	{
+
+	/**
+	 * Construtor Empty Initialize the x and y.
+	 * 
+	 * @param x
+	 * @param y
+	 */
+	public Empty(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
+
 	/**
+	 * Get X.
+	 * 
 	 * @return the x
 	 */
 	public int getX() {
 		return x;
 	}
+
 	/**
-	 * @param x the x to set
+	 * Set X.
+	 * 
+	 * @param x
+	 *            the x to set
 	 */
 	public void setX(int x) {
 		this.x = x;
 	}
+
 	/**
+	 * Get Y.
+	 * 
 	 * @return the y
 	 */
 	public int getY() {
 		return y;
 	}
+
 	/**
-	 * @param y the y to set
+	 * Set Y.
+	 * 
+	 * @param y
+	 *            the y to set
 	 */
 	public void setY(int y) {
 		this.y = y;

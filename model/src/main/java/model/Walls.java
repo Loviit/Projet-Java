@@ -4,23 +4,21 @@ import java.awt.Rectangle;
 
 
 /**
- * <b> Walls is a class that manages the hitbox of objects. </b>
+ * <b> The class Wall. </b>
  *  
- * @author ptorc
+ * @author Alyssa
  *
  * @version 1.0
  */
 public class Walls {
 	
-	/**
-	 * x and y coordinates of the displayed objects
-	 */
+	/** x and y  */
 	int x, y;
 	
 	/**
 	 * Returns the hitbox of the object
 	 * 
-	 * @return hitbox of the object
+	 * @return hitbox
 	 */
 	public Rectangle getBounds() {
 		Rectangle HitBox = new Rectangle(x, y, 32, 32);
@@ -30,7 +28,7 @@ public class Walls {
 	/**
 	 * Returns the X coordinate of the object
 	 * 
-	 * @return X coordinate of the object
+	 * @return x
 	 */
 	public int getX() {
 		return x;
@@ -39,7 +37,7 @@ public class Walls {
 	/**
 	 * Returns the Y coordinate of the object
 	 * 
-	 * @return Y coordinate of the object
+	 * @return y
 	 */
 	public int getY() {
 		return y;
