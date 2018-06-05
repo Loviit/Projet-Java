@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="C:\Users\fifib\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar;C:\Users\fifib\git\Projet-Java\view\target\classes;C:\Users\fifib\git\Projet-Java\contract\target\test-classes;C:\Users\fifib\git\Projet-Java\controller\target\test-classes;\main\target\test-classes;C:\Users\fifib\git\Projet-Java\contract\target\classes;C:\Users\fifib\git\Projet-Java\model\target\test-classes;C:\Users\fifib\git\Projet-Java\controller\target\classes;C:\Users\fifib\.m2\repository\mysql\mysql-connector-java\6.0.6\mysql-connector-java-6.0.6.jar;\showboard\target\test-classes;C:\Users\fifib\git\Projet-Java\view\target\test-classes;C:\Users\fifib\git\Projet-Java\showboard\target\classes;C:\Users\fifib\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\fifib\git\Projet-Java\model\target\classes;C:\Users\fifib\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\fifib\.p2\pool\plugins\org.hamcrest.core_1.3.0.v201303031735.jar" destdir="" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="view,main,model.mobile,model,model.dao,controller,showboard" source="1.8" sourcepath="C:\Users\fifib\git\Projet-Java\model\src\test\java;C:\Users\fifib\git\Projet-Java\showboard\src\main\java;C:\Users\fifib\git\Projet-Java\contract\src\main\java;C:\Users\fifib\git\Projet-Java\view\src\main\java;C:\Users\fifib\git\Projet-Java\contract\src\test\java;C:\Users\fifib\git\Projet-Java\view\src\test\java;C:\Users\fifib\git\Projet-Java\controller\src\test\java;C:\Users\fifib\git\Projet-Java\controller\src\main\java;C:\Users\fifib\git\Projet-Java\model\src\main\java;C:\Users\fifib\git\Projet-Java\main\src\main\java" splitindex="true" use="true" version="true">
+            <link href="http://hamcrest.org/JavaHamcrest/javadoc/1.3/"/>
+            <link href="https://docs.oracle.com/javase/8/docs/api/"/>
+            <link href="http://junit.org/junit4/javadoc/latest/"/>
+            <link href="http://docs.oracle.com/javase/8/javafx/api/"/>
+        </javadoc>
+    </target>
+</project>
